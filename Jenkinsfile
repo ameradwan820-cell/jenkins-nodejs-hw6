@@ -4,16 +4,14 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout scm
+                git branch: 'main', url: 'https://github.com/ameradwan820-cell/jenkins-nodejs-hw6.git'
             }
         }
 
         stage('Build') {
             steps {
-                sh '''
-                    node --version
-                    npm run build
-                '''
+                sh 'node --version'
+                sh 'npm run build'
             }
         }
 
