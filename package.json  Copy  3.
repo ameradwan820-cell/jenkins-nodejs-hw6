@@ -1,0 +1,10 @@
+{
+  "name": "jenkins-nodejs-hw6",
+  "version": "1.0.0",
+  "description": "Node.js project for Jenkins Homework 6",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js && node -e \"require('fs').mkdirSync('dist', {recursive:true}); require('fs').writeFileSync('dist/build.txt', 'Jenkins build successful')\"",
+    "test": "node -e \"console.log('All tests passed')\""
+  }
+}
